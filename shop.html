@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /*
+Hey!
+Note that I added an option to combine horizontal lines with the "horizontal" class. 
+You can change the colors, sizes, type of tags and whatever you want.
+Feel free to tell me what you think about it!
+Jasmine
+*/
+.job-search-section {
+      background-color: #fff;
+      padding: 72px 80px;
+    }
+    .container {
+      max-width: 1208px;
+      margin: 0 auto;
+    }
+    .section-title {
+      color: #323842;
+      font: 700 48px/1 Sarabun, sans-serif;
+      text-align: center;
+      margin-bottom: 46px;
+    }
+    .section-title span {
+      color: #0ea89b;
+    }
+    .search-form {
+      display: flex;
+      gap: 1px;
+      font: 400 18px/2 Lato, sans-serif;
+    }
+    .input-group {
+      flex-grow: 1;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 12px 20px 12px 48px;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      background-color: #f3f4f6;
+      font-size: 18px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+    }
+    .dropdown {
+      background-color: #f3f4f6;
+    }
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      padding: 12px 20px;
+      border: none;
+      background: none;
+      font-size: 18px;
+      color: #171a1f;
+      cursor: pointer;
+    }
+    .dropdown-icon {
+      width: 18px;
+      height: 18px;
+    }
+    .search-button {
+      padding: 12px 34px;
+      border: none;
+      border-radius: 0 6px 6px 0;
+      background-color: #0ea89b;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-width: 991px) {
+      .job-search-section {
+        padding: 40px 20px;
+      }
+      .section-title {
+        font-size: 40px;
+      }
+      .search-form {
+        flex-direction: column;
+      }
+      .search-input, .dropdown-toggle, .search-button {
+        border-radius: 6px;
+      }
+    }
+
+
+
+
+
+
+    html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Roboto, sans-serif;
+}
+
+.slider {
+  position: relative;
+  width: 960px;
+  height: 300px;
+  margin: 50px auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  transform: translatex(-50%);
+  z-index: 1000;
+
+  list-style: none;
+  text-align: center;
+}
+
+.slider input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #212121;
+  transition: background-color 0.2s linear;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"] {
+  background-color: blue;
+}
+
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: blue1;
+}
+
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color: blue;
+}
+
+/* SLIDES */
+
+.slides {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translatex(-100%);
+  transition: transform 250ms linear;
+}
+
+.slide-content {
+  width: 400px;
+}
+
+.slide-title {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.slide-text {
+  margin-bottom: 20px;
+}
+
+.slide-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  background-color: blue;
+}
+
+.slide-image img {
+  max-width: 100%;
+}
+
+/* Slide animations */
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+  0% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translatex(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translatex(100%);
+  }
+}
+    </style>
+</head>
+<body>
+    <section class="job-search-section">
+        <div class="container">
+          <h2 class="section-title">Explore more <span>Medecines</span></h2>
+          <form class="search-form" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+              <label for="searchInput" class="visually-hidden">Search for tasks or worker</label>
+              <input type="text" id="searchInput" placeholder="....." class="search-input" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14bee0bbb12d2f4804a9b9e4e4606e502cebe20d45d7673f5a82548f81b2b830?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" class="search-icon" />
+            </div>
+            <div class="dropdown">
+              <button type="button" class="dropdown-toggle">
+                <!-- Task/worker -->
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bce9488900eb80dba422eb9cb282d3a74a0f0c827a286dbddb4e7e98f0dd6ee?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" class="dropdown-icon" />
+              </button>
+            </div>
+            <button type="submit" class="search-button">Search</button>
+          </form>
+        </div>
+      </section>
+      <div class="slider">
+        <input type="radio" name="toggle" id="btn-1" checked>
+        <input type="radio" name="toggle" id="btn-2">
+        <input type="radio" name="toggle" id="btn-3">
+      
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+      
+        <ul class="slides">
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Dorma Asitretin 20mg</h2>
+              <p class="slide-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dignissimos commodi eos totam perferendis possimus dolorem, deleniti vitae harum? Enim.</p>
+              <a href="#" class="slide-link">Add to Cart</a>
+            </div>
+            <p class="slide-image">
+              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-7-150x150.png" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Probenecid Pills 15g</h2>
+              <p class="slide-text">Nisi ratione magni ea quis animi incidunt velit voluptate dolorem enim possimus, nam provident excepturi ipsam nihil molestiae minus delectus!</p>
+              <a href="#" class="slide-link">Add to Cart</a>
+            </div>
+            <p class="slide-image">
+              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-12.png" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Vitpro Dailyfit 200g</h2>
+              <p class="slide-text">Quisquam quod ut quasi, vero obcaecati laudantium asperiores corporis ad atque. Expedita fugit dicta maxime vel doloribus sequi, facilis dignissimos.</p>
+              <a href="#" class="slide-link">Add to Cart</a>
+            </div>
+            <p class="slide-image">
+              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-10-300x300.png" alt="stuff" width="320" height="240">
+            </p>
+          </li>
+        </ul>
+      </div>
+</body>
+</html>
