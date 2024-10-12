@@ -55,7 +55,7 @@ header
 
 .logo img
 {
-  width: 40px;
+  width: 50px;
   margin-right: 3px;
   transition: all .50 ease;
 }
@@ -66,6 +66,7 @@ header
   font-size: 1.5rem;
   font-weight: bold;
   transition: all .50 ease;
+
 }
 
 .navbarr
@@ -112,7 +113,9 @@ header
 {
   color: black;
 }
-
+#navicon{
+  font-size: 30px;
+}
 #menu-icon
 {
   font-size: 35px;
@@ -148,15 +151,18 @@ header
   {
     display: block;
   }
-
+.instagram{
+  font-size: 40px;
+}
   .navbarr
   {
     position: absolute;
+    background: #f9f9f9e6;
     top: 60%;
-    right: -100%;
-    width: 270px;
-    height: 29vh;
-    background-color: black;
+    right: 100%;
+    width: 100%;
+    height: auto;
+    font-weight: 900;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,6 +170,7 @@ header
     padding-top: 20px;
     padding-bottom: 20px;
     transition: all .50s ease;
+
   }
   
   .navbarr a
@@ -171,13 +178,13 @@ header
     display: block;
     margin: 12px 0;
     padding: 0 25px;
-    color: #fff;
+    color: black;
     transition: all .50 ease;
   }
 
   .navbarr a:hover
   {
-    color: wheat;
+    color: rgb(150, 150, 225);
     transform: translateX(7px);
   }
 
@@ -190,11 +197,13 @@ header
   {
     right: 2%;
   }
-
+#navicon{
+  font-size: 30px;
+}
   .logo img
   {
     margin-left: 10px;
-    width: 30px;
+    width: 70px;
     transition: all .50s ease;
   }
 
@@ -339,7 +348,7 @@ h2 {
 </head>
 <body>
     <header>
-        <a href="" class="logo"><img src="https://shenliktech.com/shen/assets/img/logo.png" alt=""> <span>IAN</span></a>
+        <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
 
         <ul class="navbarr">
             <li><a href="#home" class="active">Home</a></li>
@@ -351,9 +360,9 @@ h2 {
 
         <div class="mainn">
             
-            <a href="https://www.instagram.com/" class="instagram"> <i class='bx bxl-instagram'></i></a>
-            <a href="https://www.linkedin.com/" class="linkedin"><i class='bx bxl-linkedin' ></i></a>
-            <a href="https://www.behance.com/" class="behance"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/" class="instagram"> <i id="navicon" class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/" class="linkedin"><i id="navicon" class='bx bxl-linkedin' ></i></a>
+            <a href="https://www.behance.com/" class="behance"><i id="navicon" class='bx bxl-facebook'></i></a>
            
             <i id="menu-icon" class='bx bxs-grid'></i>
         </div>
