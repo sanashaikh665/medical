@@ -4,352 +4,475 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-       /*
-Hey!
-Note that I added an option to combine horizontal lines with the "horizontal" class. 
-You can change the colors, sizes, type of tags and whatever you want.
-Feel free to tell me what you think about it!
-Jasmine
-*/
-.job-search-section {
-      background-color: #fff;
-      padding: 72px 80px;
+        .carousel {
+    /* ... */
+    > * {
+      flex: 0 0 100%;
     }
-    .container {
-      max-width: 1208px;
-      margin: 0 auto;
+  }
+
+  /* Group the cards for better structure. */
+  .group {
+    display: flex;
+    gap: 20px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+  }
+
+
+  .group {
+    /* ... */
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
     }
-    .section-title {
-      color: #323842;
-      font: 700 48px/1 Sarabun, sans-serif;
-      text-align: center;
-      margin-bottom: 46px;
+    100% {
+      transform: translateX(-100%);
     }
-    .section-title span {
-      color: #0ea89b;
+  }
+
+
+  .carousel {
+    /* ... */
+    &:hover .group {
+      animation-play-state: paused;
     }
-    .search-form {
-      display: flex;
-      gap: 1px;
-      font: 400 18px/2 Lato, sans-serif;
+  }
+
+  .carousel {
+    /* ... */
+    &:hover .group {
+      animation-play-state: paused;
     }
-    .input-group {
-      flex-grow: 1;
-      position: relative;
-    }
-    .search-input {
-      width: 100%;
-      padding: 12px 20px 12px 48px;
-      border: none;
-      border-radius: 6px 0 0 6px;
-      background-color: #f3f4f6;
-      font-size: 18px;
-    }
-    .search-icon {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-    }
-    .dropdown {
-      background-color: #f3f4f6;
-    }
-    .dropdown-toggle {
-      display: flex;
-      align-items: center;
-      gap: 35px;
-      padding: 12px 20px;
-      border: none;
-      background: none;
-      font-size: 18px;
-      color: #171a1f;
-      cursor: pointer;
-    }
-    .dropdown-icon {
-      width: 18px;
-      height: 18px;
-    }
-    .search-button {
-      padding: 12px 34px;
-      border: none;
-      border-radius: 0 6px 6px 0;
-      background-color: #0ea89b;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-    }
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-    @media (max-width: 991px) {
-      .job-search-section {
-        padding: 40px 20px;
-      }
-      .section-title {
-        font-size: 40px;
-      }
-      .search-form {
-        flex-direction: column;
-      }
-      .search-input, .dropdown-toggle, .search-button {
-        border-radius: 6px;
-      }
-    }
+  }
 
 
 
 
+  .carousel {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: auto px;
+    overflow: hidden;
+    display: flex;
+  }
 
+  .card {
+    width: 100%;
+    color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    padding: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 200px; */
 
-    html {
-  box-sizing: border-box;
+    &:nth-child(1) {
+      /* background: #7958ff; */
+    }
+
+    &:nth-child(2) {
+      /* background: #5d34f2; */
+    }
+
+    &:nth-child(3) {
+      /* background: #4300da; */
+    }
+  }
+  .im{
+    width: 100%;
+    height: auto;
+  }
+.heading{
+    text-align: center;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
+
+
+
+
+
+
+
+
+:root {
+  --main-color: #6200f3;
 }
 
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: Roboto, sans-serif;
-}
-
-.slider {
-  position: relative;
-  width: 960px;
-  height: 300px;
-  margin: 50px auto;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.slider-controls {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 200px;
-  text-align: center;
-  transform: translatex(-50%);
-  z-index: 1000;
-
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
   list-style: none;
-  text-align: center;
-}
-
-.slider input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider-controls label {
-  display: inline-block;
-  border: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #212121;
-  transition: background-color 0.2s linear;
-}
-
-#btn-1:checked ~ .slider-controls label[for="btn-1"] {
-  background-color: blue;
-}
-
-#btn-2:checked ~ .slider-controls label[for="btn-2"] {
-  background-color: blue1;
-}
-
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: blue;
-}
-
-/* SLIDES */
-
-.slides {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-
-  opacity: 0;
-  transform: translatex(-100%);
-  transition: transform 250ms linear;
-}
-
-.slide-content {
-  width: 400px;
-}
-
-.slide-title {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.slide-text {
-  margin-bottom: 20px;
-}
-
-.slide-link {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #fff;
-  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
-  background-color: blue;
 }
 
-.slide-image img {
-  max-width: 100%;
+body, html {
+	height: 100vh;
+	font-family: Poppins-Regular, sans-serif;
 }
 
-/* Slide animations */
-#btn-1:checked ~ .slides .slide:nth-child(1) {
-  transform: translatex(0);
-  opacity: 1;
+body a
+{
+  text-decoration: none;
+  color: #000;
 }
 
-#btn-2:checked ~ .slides .slide:nth-child(2) {
-  transform: translatex(0);
-  opacity: 1;
+header
+{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 28px 12%;
+  transition: all .50s ease;
 }
 
-#btn-3:checked ~ .slides .slide:nth-child(3) {
-  transform: translatex(0);
-  opacity: 1;
+.logo
+{
+  display: flex;
+  align-items: center;
 }
 
-#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
+.logo img
+{
+  width: 50px;
+  margin-right: 3px;
+  transition: all .50 ease;
 }
 
-#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
+.logo span
+{
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all .50 ease;
+
 }
 
-#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
+.navbarr
+{
+  display: flex;
+  margin-top: 15px;
 }
 
-@keyframes swap-out {
-  0% {
-    transform: translatex(0);
-    opacity: 1;
+.navbarr a
+{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all .50s ease;
+}
+
+.navbarr a:hover
+{
+  color:black;
+}
+
+.navbarr a.active
+{
+  color: black;
+}
+
+.mainn
+{
+  display: flex;
+  align-items: center;
+}
+
+.mainn a
+{
+  margin-right: 25px;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.mainn a:hover
+{
+  color: black;
+}
+#navicon{
+  font-size: 30px;
+}
+#menu-icon
+{
+  font-size: 35px;
+  color: #000;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media only screen and (max-width: 1350px) {
+  
+  /* MOBILE MENU */
+    
+  header
+  {
+    padding: 14px 2%;
+    transition: .2s;
   }
 
-  50% {
-    transform: translatex(50%);
-    opacity: 0;
+  .navbarr a
+  {
+    padding: 5px 0;
+    margin: 0px 20px;
   }
 
-  100% {
-    transform: translatex(100%);
+}
+
+@media only screen and (max-width: 1090px) {
+  
+  /* MOBILE MENU */
+    
+  #menu-icon
+  {
+    display: block;
+  }
+.instagram{
+  font-size: 40px;
+}
+  .navbarr
+  {
+    position: absolute;
+    background: #f9f9f9e6;
+    top: 60%;
+    right: 100%;
+    width: 100%;
+    height: auto;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all .50s ease;
+
+  }
+  
+  .navbarr a
+  {
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    color: black;
+    transition: all .50 ease;
+  }
+
+  .navbarr a:hover
+  {
+    color: rgb(150, 150, 225);
+    transform: translateX(7px);
+  }
+
+  .navbarr a.active
+  {
+    color: wheat;
+  }
+
+  .navbarr.open
+  {
+    right: 2%;
+  }
+#navicon{
+  font-size: 30px;
+}
+  .logo img
+  {
+    margin-left: 10px;
+    width: 70px;
+    transition: all .50s ease;
+  }
+
+  .logo span
+  {
+    font-size: 1.1rem;
+    transition: all .50s ease;
+  }
+
+  .mainn a
+  {
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all .50s ease;
   }
 }
+
+
+
+.containerone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.box2 {
+    background-color: transparent;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 calc(11.11% - 40px); /* 3 boxes in a row */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.box2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.i{
+  text-align: center;
+}
+
+
+
     </style>
 </head>
 <body>
-    <section class="job-search-section">
-        <div class="container">
-          <h2 class="section-title">Explore more <span>Medecines</span></h2>
-          <form class="search-form" (ngSubmit)="onSubmit()">
-            <div class="input-group">
-              <label for="searchInput" class="visually-hidden">Search for tasks or worker</label>
-              <input type="text" id="searchInput" placeholder="....." class="search-input" />
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14bee0bbb12d2f4804a9b9e4e4606e502cebe20d45d7673f5a82548f81b2b830?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" class="search-icon" />
-            </div>
-            <div class="dropdown">
-              <button type="button" class="dropdown-toggle">
-                <!-- Task/worker -->
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bce9488900eb80dba422eb9cb282d3a74a0f0c827a286dbddb4e7e98f0dd6ee?placeholderIfAbsent=true&apiKey=7d34c187c61d4dedb88861d765416b13" alt="" class="dropdown-icon" />
-              </button>
-            </div>
-            <button type="submit" class="search-button">Search</button>
-          </form>
+  <header>
+    <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
+
+    <ul class="navbarr">
+        <li><a href="main.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#aboutt">About us</a></li>
+    </ul>
+
+    <div class="mainn">
+        
+        <a href="cart.html" class="instagram"> <i id="navicon" class='bx bx-cart-add'></i> </a>
+        <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
+        <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
+       
+        <i id="menu-icon" class='bx bxs-grid'></i>
+    </div>
+</header>
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+    <h1 class="heading">Welcome to Our Shop</h3>
+
+    <div class="carousel">
+        <div class="group">
+          <div class="card">
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+          </div>
+          <div class="card">
+
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+          </div>
+          <div class="card">
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+          </div>
         </div>
-      </section>
-      <div class="slider">
-        <input type="radio" name="toggle" id="btn-1" checked>
-        <input type="radio" name="toggle" id="btn-2">
-        <input type="radio" name="toggle" id="btn-3">
-      
-        <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
+        <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
+        <div aria-hidden class="group">
+          <div class="card">
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+
+          </div>
+          <div class="card">
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+
+
+          </div>
+          <div class="card">
+            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+          </div>
         </div>
-      
-        <ul class="slides">
-          <li class="slide">
-            <div class="slide-content">
-              <h2 class="slide-title">Dorma Asitretin 20mg</h2>
-              <p class="slide-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dignissimos commodi eos totam perferendis possimus dolorem, deleniti vitae harum? Enim.</p>
-              <a href="#" class="slide-link">Add to Cart</a>
-            </div>
-            <p class="slide-image">
-              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-7-150x150.png" alt="stuff" width="320" height="240">
-            </p>
-          </li>
-          <li class="slide">
-            <div class="slide-content">
-              <h2 class="slide-title">Probenecid Pills 15g</h2>
-              <p class="slide-text">Nisi ratione magni ea quis animi incidunt velit voluptate dolorem enim possimus, nam provident excepturi ipsam nihil molestiae minus delectus!</p>
-              <a href="#" class="slide-link">Add to Cart</a>
-            </div>
-            <p class="slide-image">
-              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-12.png" alt="stuff" width="320" height="240">
-            </p>
-          </li>
-          <li class="slide">
-            <div class="slide-content">
-              <h2 class="slide-title">Vitpro Dailyfit 200g</h2>
-              <p class="slide-text">Quisquam quod ut quasi, vero obcaecati laudantium asperiores corporis ad atque. Expedita fugit dicta maxime vel doloribus sequi, facilis dignissimos.</p>
-              <a href="#" class="slide-link">Add to Cart</a>
-            </div>
-            <p class="slide-image">
-              <img src="https://templatekit.jegtheme.com/farmacy/wp-content/uploads/sites/287/2022/05/medicine-10-300x300.png" alt="stuff" width="320" height="240">
-            </p>
-          </li>
-        </ul>
       </div>
+
+
+      <br><br><br>
+
+      <h1 class="i">Shop By Categories</h1>
+
+
+    <div class="containerone">
+      <div class="box2">
+        <a href="sl.html">   <img src="https://www.shutterstock.com/shutterstock/videos/1077334793/thumb/1.jpg?ip=x480" alt="Image 1">
+          <h2>Antibiotics</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+      </div>
+
+
+      <div class="box2">
+        <a href="drops.html">  <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353962468/ZV/CG/MS/16645300/latanoprost-ophthalmic-eye-drop-500x500.jpg" alt="Image 2">
+          <h2>Drops</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+      </div>
+
+
+      <div class="box2">
+        <a href="essential.html">  <img src="https://plus.unsplash.com/premium_photo-1668487826871-2f2cac23ad56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D" alt="Image 3">
+          <h2>Essential</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+      </div>
+
+
+      <div class="box2">
+         <img src="https://i.pinimg.com/736x/5b/28/73/5b2873e61b8b2dcb9296d63e6ef2da58.jpg" alt="Image 4">
+          <h2>Sanitizer</h2>
+      </div>
+
+
+      <div class="box2">
+        <a href="syrup.html">   <img src="https://img.freepik.com/free-vector/cough-syrup-bottle-plastic-spoon-pharmacy_33099-2228.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727913600&semt=ais_hybrid" alt="Image 5">
+          <h2>Syrup</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+      </div>
+
+
+      <div class="box2">
+        <a href="vitamins.html"> <img src="https://thumbs.dreamstime.com/b/vitamins-supplements-as-capsule-fruit-vegetables-nuts-beans-inside-nutrient-pill-natural-medicine-health-treatment-d-110319057.jpg" alt="Image 6">
+          <h2>Vitamins</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+      </div>
+
+
+    </div>
+
+
+      <script>
+        let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbarr');
+
+menu.onclick = () =>
+{
+  menu.classList.toggle('bi-x');
+  navbar.classList.toggle('open');
+}
+      </script>
 </body>
 </html>
