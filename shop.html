@@ -16,7 +16,7 @@
   /* Group the cards for better structure. */
   .group {
     display: flex;
-    gap: 20px;
+    gap: 2px;
     /* Add padding to the right to create a gap between the last and first card. */
     padding-right: 20px;
   }
@@ -25,7 +25,7 @@
   .group {
     /* ... */
     will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
-    animation: scrolling 10s linear infinite;
+    animation: scrolling 7s linear infinite;
   }
 
   @keyframes scrolling {
@@ -67,7 +67,7 @@
     width: 100%;
     color: white;
     border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    
     padding: 20px;
     font-size: xx-large;
     justify-content: center;
@@ -343,8 +343,8 @@ header
     border-radius: 5px;
 }
 
-h2 {
-    font-size: 1.5em;
+.anti {
+    font-size: 15px;
     margin-top: 10px;
 }
 .i{
@@ -357,25 +357,30 @@ h2 {
 </head>
 <body>
   <header>
-    <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
+        <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
 
-    <ul class="navbarr">
-        <li><a href="main.html" class="active">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="#pages">Pages</a></li>
-        <li><a href="#aboutt">About us</a></li>
-    </ul>
+        <ul class="navbarr">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#pages">Pages</a></li>
+            <li><a href="#aboutt">About us</a></li>
+        </ul>
 
-    <div class="mainn">
-        
-        <a href="cart.html" class="instagram"> <i id="navicon" class='bx bx-cart-add'></i> </a>
-        <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
-        <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
-       
-        <i id="menu-icon" class='bx bxs-grid'></i>
-    </div>
-</header>
+        <div class="mainn">
+            
+            <a href="cart.html" class="instagram"> <i id="navicon" class='bx bx-cart-add'></i> </a>
+            <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
+            
+          
+          </a>
+            
+            
+            <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
+           
+            <i id="menu-icon" class='bx bxs-grid'></i>
+        </div>
+    </header>
 
 <br><br><br><br><br><br><br><br>
 
@@ -391,29 +396,29 @@ h2 {
     <div class="carousel">
         <div class="group">
           <div class="card">
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec6.jpeg" alt="">
           </div>
           <div class="card">
 
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec5.jpeg" alt="">
           </div>
           <div class="card">
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec4.jpeg" alt="">
           </div>
         </div>
         <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
         <div aria-hidden class="group">
           <div class="card">
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec1.jpeg" alt="">
 
           </div>
           <div class="card">
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec2.jpeg" alt="">
 
 
           </div>
           <div class="card">
-            <img class="im"  src="https://newspaperads.ads2publish.com/wp-content/uploads/2019/06/medplus-flat-20-discount-on-medicines-ad-times-of-india-chennai-23-05-2019.png" alt="">
+            <img class="im"  src="mec3.jpeg" alt="">
           </div>
         </div>
       </div>
@@ -426,39 +431,44 @@ h2 {
 
     <div class="containerone">
       <div class="box2">
-        <a href="sl.html">   <img src="https://www.shutterstock.com/shutterstock/videos/1077334793/thumb/1.jpg?ip=x480" alt="Image 1">
-          <h2>Antibiotics</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+        <a href="sl.html"><img src="https://www.shutterstock.com/shutterstock/videos/1077334793/thumb/1.jpg?ip=x480" alt="Image 1">
+          <a class="anti" href="">Antibiotics (4)</a></a>
       </div>
 
 
       <div class="box2">
         <a href="drops.html">  <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353962468/ZV/CG/MS/16645300/latanoprost-ophthalmic-eye-drop-500x500.jpg" alt="Image 2">
-          <h2>Drops</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+         
+          <a class="anti" href="">Drops (4)</a></a>
       </div>
 
 
       <div class="box2">
         <a href="essential.html">  <img src="https://plus.unsplash.com/premium_photo-1668487826871-2f2cac23ad56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D" alt="Image 3">
-          <h2>Essential</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
+          
+          <a class="anti" href="">Essential (4)</a></a>
       </div>
 
 
       <div class="box2">
          <img src="https://i.pinimg.com/736x/5b/28/73/5b2873e61b8b2dcb9296d63e6ef2da58.jpg" alt="Image 4">
-          <h2>Sanitizer</h2>
+         
+          <a class="anti" href="">Sanitizer (4)</a></a>
       </div>
 
 
       <div class="box2">
         <a href="syrup.html">   <img src="https://img.freepik.com/free-vector/cough-syrup-bottle-plastic-spoon-pharmacy_33099-2228.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727913600&semt=ais_hybrid" alt="Image 5">
-          <h2>Syrup</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
+         
+          <a class="anti" href="">Syrup (4)</a></a>
+        </div>
 
 
       <div class="box2">
         <a href="vitamins.html"> <img src="https://thumbs.dreamstime.com/b/vitamins-supplements-as-capsule-fruit-vegetables-nuts-beans-inside-nutrient-pill-natural-medicine-health-treatment-d-110319057.jpg" alt="Image 6">
-          <h2>Vitamins</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
+         
+          <a class="anti" href="">Vitamins (4)</a></a>
+        </div>
 
 
     </div>
