@@ -232,6 +232,7 @@ header
 .background{
     width: 100%;
   height: auto;
+ 
 }
 .container {
     display: flex;
@@ -266,10 +267,11 @@ p {
 #icon1{
     font-size: 60px;
     color: rgb(116, 116, 172);
+    transition: transform .8s;
 }
 #icon1:hover{
   
-  transition: 0.5s;
+  transform: rotateY(360deg);
 }
 .b1{
   border: none;
@@ -344,31 +346,91 @@ h2 {
   align-items: center;
   text-align: center;
 }
+
+
+.box5{
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #ffd52d;
+    outline: none;
+    transition: .5s;
+}
+.box5:hover input{
+    width: 150px;
+
+    background: white;
+    color: #000;
+    height: 50px;
+    border-radius: 1  0px;
+}
+.box5 i{
+    position: absolute;
+    top: 50%;
+    right: -1px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color:black;
+    transition: .2s;
+}
+.box5:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+/* YouTube icon */
+
+
+
     </style>
 </head>
 <body>
+
+  
+
     <header>
         <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
 
         <ul class="navbarr">
             <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="#pages">Pages</a></li>
             <li><a href="#aboutt">About us</a></li>
         </ul>
 
         <div class="mainn">
             
-            <a href="https://www.instagram.com/" class="instagram"> <i id="navicon" class='bx bxl-instagram'></i></a>
-            <a href="https://www.linkedin.com/" class="linkedin"><i id="navicon" class='bx bxl-linkedin' ></i></a>
-            <a href="https://www.behance.com/" class="behance"><i id="navicon" class='bx bxl-facebook'></i></a>
+            <a href="cart.html" class="instagram"> <i id="navicon" style="padding: 10px;border-radius: 100%;border: 1px solid black;" class='bx bx-cart-add'></i> </a>
+            <!-- <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a> -->
+            <div class="box5">
+              <form name="search">
+                  <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+              </form>
+              <i  class='bx bx-search'></i>
+          
+          </div>
+          
+          </a>
+            
+            
+            <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
            
             <i id="menu-icon" class='bx bxs-grid'></i>
         </div>
     </header>
-    
-    <img class="background" src="doc.jpeg" alt="">
+    <br><br><br><br>
+    <img class="background" src="https://images.pexels.com/photos/3279196/pexels-photo-3279196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
     
     <div class="container">
         <div class="box">
@@ -398,49 +460,7 @@ h2 {
             <br> <button class="b1">Read More</button>
         </div>
     </div>
-    <h1 class="i">Shop By Categories</h1>
-
-	
-    <div class="containerone">
-      <div class="box2">
-        <a href="sl.html">   <img src="https://www.shutterstock.com/shutterstock/videos/1077334793/thumb/1.jpg?ip=x480" alt="Image 1">
-          <h2>Antibiotics</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="drops.html">  <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353962468/ZV/CG/MS/16645300/latanoprost-ophthalmic-eye-drop-500x500.jpg" alt="Image 2">
-          <h2>Drops</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="essential.html">  <img src="https://plus.unsplash.com/premium_photo-1668487826871-2f2cac23ad56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D" alt="Image 3">
-          <h2>Essential</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
-
-
-      <div class="box2">
-         <img src="https://i.pinimg.com/736x/5b/28/73/5b2873e61b8b2dcb9296d63e6ef2da58.jpg" alt="Image 4">
-          <h2>Sanitizer</h2>
-      </div>
-
-
-      <div class="box2">
-        <a href="syrup.html">   <img src="https://img.freepik.com/free-vector/cough-syrup-bottle-plastic-spoon-pharmacy_33099-2228.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727913600&semt=ais_hybrid" alt="Image 5">
-          <h2>Syrup</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="vitamins.html"> <img src="https://thumbs.dreamstime.com/b/vitamins-supplements-as-capsule-fruit-vegetables-nuts-beans-inside-nutrient-pill-natural-medicine-health-treatment-d-110319057.jpg" alt="Image 6">
-          <h2>Vitamins</h2><i  style="font-size: 40px;" class='bx bx-chevron-down'></i></a>
-      </div>
-
-
-  </div>
-
-
+    
   <h1 class="i">Medicines Of The Week! With 50% Offer</h1><br><br>
   <div class="upexplore">
 <button   class="explore"><a href="shop.html">EXPLORE</a></button>
@@ -450,6 +470,7 @@ h2 {
 
 
     <script>
+      
         let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbarr');
 
@@ -458,6 +479,11 @@ menu.onclick = () =>
   menu.classList.toggle('bi-x');
   navbar.classList.toggle('open');
 }
+
+
+
+
+	
     </script>
 </body>
 </html>
