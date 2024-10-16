@@ -17,14 +17,14 @@
   .group {
     display: flex;
     gap: 2px;
-    /* Add padding to the right to create a gap between the last and first card. */
-    padding-right: 20px;
+    
+    padding-right: 0px;
   }
 
 
   .group {
     /* ... */
-    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    will-change: transform; 
     animation: scrolling 7s linear infinite;
   }
 
@@ -67,8 +67,7 @@
     width: 100%;
     color: white;
     border-radius: 24px;
-    
-    padding: 20px;
+    padding: 10px;
     font-size: xx-large;
     justify-content: center;
     align-items: center;
@@ -166,7 +165,7 @@ header
 .navbarr
 {
   display: flex;
-  margin-top: 15px;
+  margin-top: -10px;
 }
 
 .navbarr a
@@ -209,6 +208,16 @@ header
 }
 #navicon{
   font-size: 30px;
+}
+
+.card {
+    width: 110%;
+    color: white;
+    border-radius: 24px;
+    padding: 5px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
 }
 #menu-icon
 {
@@ -353,129 +362,441 @@ header
 
 
 
+
+.container {
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px 0;
+    transition: transform 0.5s;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.icon-cart {
+    position: relative;
+}
+
+.cir {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    color: aliceblue;
+    top: 50%;
+    right: -20%;
+}
+
+#im {
+    font-size: 35px;
+}
+
+.ListProduct .item img {
+    width: 100%;
+    /* filter: drop-shadow(0 50px 20px black); */
+}
+
+.ListProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.ListProduct .item {
+    background-color: rgba(64, 3, 247, 0.836);
+    padding: 10px;
+    border-radius: 20px;
+    color: white  ;
+    
+}
+
+.ListProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.ListProduct .item .price {
+    letter-spacing: 3px;
+    font-size: small;
+}
+
+.ListProduct .item button {
+    background-color: rgb(99, 99, 250);
+    color: white;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 120px;
+}
+
+.cartab {
+  
+            
+            z-index: 2000; 
+    width: 400px;
+    
+    background-color:white;
+    color: black;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: 0.5s;
+}
+
+body.showcart .cartab {
+
+    inset: 0 0 0 auto;
+}
+
+body.showcart .container {
+    transform: translateX(-250px);
+}
+
+.cartab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartab .btn button {
+    background-color: blue;
+    border: none;
+    font-family: poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.star{
+  justify-content: center;
+}
+.cartab .btn .close {
+    background-color:black;
+    color: #fff;
+}
+
+.cartab .listcart .item img {
+    width: 100%;
+}
+
+.cartab .listcart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listcart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listcart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: black;
+}
+
+.listcart .item:nth-child(even) {
+    background-color: transparent;
+}
+
+.listcart {
+    overflow: auto;
+}
+
+.listcart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .ListProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-cart {
+        margin-top: 10px;
+    }
+
+    .cartab {
+        width: 80%;
+    }
+
+    body.showcart .container {
+        transform: translateX(-150px);
+    }
+}
+
+@media (max-width: 480px) {
+    .ListProduct {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .icon-cart {
+        font-size: 25px;
+    }
+
+    .cartab {
+        width: 100%;
+    }
+
+    .cartab h1 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+.star{
+  justify-content: center;
+}
+}
+#medicon{
+  font-size: 20px;
+  color: orange;
+}
     </style>
 </head>
-<body>
+<body class="showcart">
   <header>
-        <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
+    <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
 
-        <ul class="navbarr">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#pages">Pages</a></li>
-            <li><a href="#aboutt">About us</a></li>
-        </ul>
+    <ul class="navbarr">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#pages">Pages</a></li>
+        <li><a href="#aboutt">About us</a></li>
+    </ul>
 
-        <div class="mainn">
-            
-            <a href="cart.html" class="instagram"> <i id="navicon" class='bx bx-cart-add'></i> </a>
-            <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
-            
-          
-          </a>
-            
-            
-            <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
-           
-            <i id="menu-icon" class='bx bxs-grid'></i>
+    <div class="mainn">
+        
+      <div class="icon-cart">
+        <i id="im" class='bx bx-cart'></i>
+    <span class="cir">0</span>
+    </div>
+        <a href="search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
+        
+      
+      </a>
+        
+        
+        <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
+       
+        <i id="menu-icon" class='bx bxs-grid'></i>
+    </div>
+</header>
+
+<br><br><br> <br><br><br>
+
+<h1 class="heading">Welcome to Our Shop</h3>
+
+  <div class="carousel">
+      <div class="group">
+        <div class="card">
+          <img class="im"  src="mec6.jpeg" alt="">
         </div>
-    </header>
+        <div class="card">
 
-<br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-    <h1 class="heading">Welcome to Our Shop</h3>
-
-    <div class="carousel">
-        <div class="group">
-          <div class="card">
-            <img class="im"  src="mec6.jpeg" alt="">
-          </div>
-          <div class="card">
-
-            <img class="im"  src="mec5.jpeg" alt="">
-          </div>
-          <div class="card">
-            <img class="im"  src="mec4.jpeg" alt="">
-          </div>
+          <img class="im"  src="mec5.jpeg" alt="">
         </div>
-        <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
-        <div aria-hidden class="group">
-          <div class="card">
-            <img class="im"  src="mec1.jpeg" alt="">
-
-          </div>
-          <div class="card">
-            <img class="im"  src="mec2.jpeg" alt="">
-
-
-          </div>
-          <div class="card">
-            <img class="im"  src="mec3.jpeg" alt="">
-          </div>
+        <div class="card">
+          <img class="im"  src="mec4.jpeg" alt="">
         </div>
       </div>
+      <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
+      <div aria-hidden class="group">
+        <div class="card">
+          <img class="im"  src="mec1.jpeg" alt="">
 
-
-      <br><br><br>
-
-      <h1 class="i">Shop By Categories</h1>
-
-
-    <div class="containerone">
-      <div class="box2">
-        <a href="sl.html"><img src="https://www.shutterstock.com/shutterstock/videos/1077334793/thumb/1.jpg?ip=x480" alt="Image 1">
-          <a class="anti" href="">Antibiotics (4)</a></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="drops.html">  <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/353962468/ZV/CG/MS/16645300/latanoprost-ophthalmic-eye-drop-500x500.jpg" alt="Image 2">
-         
-          <a class="anti" href="">Drops (4)</a></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="essential.html">  <img src="https://plus.unsplash.com/premium_photo-1668487826871-2f2cac23ad56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVkaWNpbmV8ZW58MHx8MHx8fDA%3D" alt="Image 3">
-          
-          <a class="anti" href="">Essential (4)</a></a>
-      </div>
-
-
-      <div class="box2">
-         <img src="https://i.pinimg.com/736x/5b/28/73/5b2873e61b8b2dcb9296d63e6ef2da58.jpg" alt="Image 4">
-         
-          <a class="anti" href="">Sanitizer (4)</a></a>
-      </div>
-
-
-      <div class="box2">
-        <a href="syrup.html">   <img src="https://img.freepik.com/free-vector/cough-syrup-bottle-plastic-spoon-pharmacy_33099-2228.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727913600&semt=ais_hybrid" alt="Image 5">
-         
-          <a class="anti" href="">Syrup (4)</a></a>
         </div>
+        <div class="card">
+          <img class="im"  src="mec2.jpeg" alt="">
 
 
-      <div class="box2">
-        <a href="vitamins.html"> <img src="https://thumbs.dreamstime.com/b/vitamins-supplements-as-capsule-fruit-vegetables-nuts-beans-inside-nutrient-pill-natural-medicine-health-treatment-d-110319057.jpg" alt="Image 6">
-         
-          <a class="anti" href="">Vitamins (4)</a></a>
         </div>
-
-
+        <div class="card">
+          <img class="im"  src="mec3.jpeg" alt="">
+        </div>
+      </div>
     </div>
 
 
-      <script>
-        let menu = document.querySelector('#menu-icon');
+    <br><br>
+
+
+
+
+    <h1 class="i">Shop By Categories</h1>
+    <br>
+    <h3 class="i">Antibiotics </h3>
+<br>
+  <div class="container">
+      
+      <div class="ListProduct">
+          <div class="item" data-id="1">
+              <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+              <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+              <div class="price">₹180</div><br>
+              <div class="star" style="display: flex;">
+                <i id="medicon" class='bx bxs-star'></i>
+                <i id="medicon" class='bx bxs-star'></i>
+                <i id="medicon" class='bx bxs-star'></i>
+                <i id="medicon" class='bx bxs-star-half' ></i>
+                <i id="medicon" class='bx bx-star'></i>
+              </div><br>
+               
+    
+                
+
+              <button class="addcart" data-product-id="1">Add to cart</button>
+          </div>
+          <div class="item" data-id="2">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="2">Add to cart</button>
+          </div>
+          <div class="item" data-id="3">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="3">Add to cart</button>
+          </div>
+          <div class="item" data-id="4">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="4">Add to cart</button>
+          </div>
+          <div class="item" data-id="4">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="4">Add to cart</button>
+          </div>
+          <div class="item" data-id="4">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="4">Add to cart</button>
+          </div>
+          <div class="item" data-id="4">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="4">Add to cart</button>
+          </div>
+          <div class="item" data-id="4">
+            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
+            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
+            <div class="price">₹180</div><br>
+            <div class="star" style="display: flex;">
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star'></i>
+              <i id="medicon" class='bx bxs-star-half' ></i>
+              <i id="medicon" class='bx bx-star'></i>
+            </div><br>
+              <button class="addcart" data-product-id="4">Add to cart</button>
+          </div>
+          
+      </div>
+      
+  </div>
+<br><br><br>
+  <h3 class="i">Antibiotics </h3>
+  <br>
+  <br>
+  
+
+  <div class="cartab">
+      <h1 >Shopping Cart</h1>
+      <div class="listcart">
+          
+      </div>
+      <div class="btn">
+          <button class="close">CLOSE</button>
+
+          <button class="checkout">CHECKOUT</button>
+      </div>
+  </div>
+<script>
+
+let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbarr');
 
 menu.onclick = () =>
@@ -483,6 +804,131 @@ menu.onclick = () =>
   menu.classList.toggle('bi-x');
   navbar.classList.toggle('open');
 }
-      </script>
+
+
+
+
+let iconCart = document.querySelector('.icon-cart'); 
+let body = document.querySelector('body');
+let closecart = document.querySelector('.close');
+let Listproducthtml = document.querySelector('.ListProduct');
+let carts = [];
+let listcartclass = document.querySelector('.listcart');
+let iconcartspan = document.querySelector('.cir');
+
+// Toggle cart visibility
+iconCart.addEventListener('click', () => {
+  body.classList.toggle('showcart');
+});
+
+closecart.addEventListener('click', () => {
+  body.classList.toggle('showcart');
+});
+
+// Extract products from HTML
+const listProducts = Array.from(Listproducthtml.children).map(item => ({
+  id: item.dataset.id,
+  image: item.querySelector('img').src,
+  name: item.querySelector('h2').textContent,
+  price: parseFloat(item.querySelector('.price').textContent)
+}));
+
+// Store products in local storage for checkout page
+localStorage.setItem('listProducts', JSON.stringify(listProducts));
+
+// Event delegation for adding products to the cart
+Listproducthtml.addEventListener('click', (event) => {
+  let positionClick = event.target;
+  if (positionClick.classList.contains('addcart')) {
+      let productId = positionClick.dataset.productId;
+      addToCart(productId, positionClick);
+  }
+});
+
+// Function to add items to the cart
+const addToCart = (productId, button) => {
+  let positionThisProduct = carts.findIndex(value => value.product_id === productId);
+
+  if (positionThisProduct < 0) {
+      carts.push({
+          product_id: productId,
+          quantity: 1
+      });
+      button.textContent = 'Added to cart';
+  } else {
+      carts[positionThisProduct].quantity += 1;
+      button.textContent = 'Added to cart';
+  }
+
+  addCartDataToHTML();
+
+  // Show alert that item has been added
+  alert(`Your item "${listProducts[positionThisProduct >= 0 ? positionThisProduct : carts.length - 1].name}" has been added to the cart!`);
+};
+
+// Function to render cart data in the HTML
+const addCartDataToHTML = () => {
+  listcartclass.innerHTML = '';
+  let totalQuantity = 0;
+
+  if (carts.length > 0) {
+      carts.forEach(cart => {
+          totalQuantity += cart.quantity;
+          let newCart = document.createElement('div');
+          newCart.classList.add('item');
+          let positionProduct = listProducts.findIndex(value => value.id == cart.product_id);
+          let info = listProducts[positionProduct];
+
+          if (info) {
+              newCart.innerHTML = `
+                  <div class="image">
+                      <img src="${info.image}" alt="">
+                  </div>
+                  <div class="name">${info.name}</div>
+                  <div class="totalprice">${(info.price * cart.quantity).toFixed(2)}</div>
+                  <div class="quantity">
+                      <span class="minus">-</span>
+                      <span>${cart.quantity}</span>
+                      <span class="plus">+</span>
+                  </div>
+              `;
+              listcartclass.appendChild(newCart);
+
+              // Event listeners for increment and decrement
+              newCart.querySelector('.plus').addEventListener('click', () => {
+                  cart.quantity++;
+                  addCartDataToHTML();
+              });
+              
+              newCart.querySelector('.minus').addEventListener('click', () => {
+                  cart.quantity--;
+                  if (cart.quantity <= 0) {
+                      carts = carts.filter(c => c.product_id !== cart.product_id); // Remove product from cart
+                  }
+                  addCartDataToHTML();
+              });
+          }
+      });
+  }
+
+  iconcartspan.innerText = totalQuantity;
+};
+
+// Checkout button functionality
+document.querySelector('.checkout').addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default form submission
+  localStorage.setItem('carts', JSON.stringify(carts)); // Save cart to local storage
+  window.location.href = 'checkout.html'; // Redirect to checkout page
+});
+
+</script>
+
 </body>
+
+
+
+
+
+
+   
 </html>
