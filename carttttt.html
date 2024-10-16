@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cart Page</title>
+</head>
+<body>
+    <div class="cart-page">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script>
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const cartList = document.getElementById('cart-items');
+
+        cartItems.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'cart-item';
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <div class="cart-item-info">
+                    <strong>${item.name}</strong>
+                    <span class="cart-item-quantity">Quantity: ${item.quantity}</span>
+                </div>
+            `;
+            cartList.appendChild(div);
+        });
+
+        function clearCart() {
+            localStorage.removeItem('cartItems');
+            cartList.innerHTML = '';
+        }
+    </script>
+</body>
+</html>
