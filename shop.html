@@ -112,11 +112,13 @@
   list-style: none;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+ 
 }
 
 body, html {
 	height: 100vh;
 	font-family: Poppins-Regular, sans-serif;
+  
 }
 
 body a
@@ -135,7 +137,8 @@ header
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background: #000080;
+  color: #fff;
   padding: 28px 12%;
   transition: all .50s ease;
 }
@@ -155,9 +158,9 @@ header
 
 .logo span
 {
-  color: #000;
+  color: #fff;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   transition: all .50 ease;
 
 }
@@ -165,7 +168,8 @@ header
 .navbarr
 {
   display: flex;
-  margin-top: -10px;
+  margin-top: 15px;
+
 }
 
 .navbarr a
@@ -175,6 +179,7 @@ header
   padding: 5px 0;
   margin: 0px 30px;
   transition: all .50s ease;
+  color: #fff;
 }
 
 .navbarr a:hover
@@ -184,7 +189,8 @@ header
 
 .navbarr a.active
 {
-  color: black;
+  color: #fff;
+  font-weight: bold;
 }
 
 .mainn
@@ -195,6 +201,7 @@ header
 
 .mainn a
 {
+  color: #fff;
   margin-right: 25px;
   margin-left: 10px;
   font-size: 1.1rem;
@@ -209,20 +216,10 @@ header
 #navicon{
   font-size: 30px;
 }
-
-.card {
-    width: 110%;
-    color: white;
-    border-radius: 24px;
-    padding: 5px;
-    font-size: xx-large;
-    justify-content: center;
-    align-items: center;
-}
 #menu-icon
 {
   font-size: 35px;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   z-index: 10001;
   display: none;
@@ -242,6 +239,7 @@ header
   {
     padding: 5px 0;
     margin: 0px 20px;
+    color: #fff;
   }
 
 }
@@ -254,15 +252,17 @@ header
   {
     display: block;
   }
-.instagram{
-  font-size: 40px;
+#navicon{
+  font-size: 10px;
 }
+
   .navbarr
   {
     position: absolute;
-    background: #f9f9f9e6;
+    background: rgba(7, 2, 56, 0.8);
     top: 60%;
     right: 100%;
+    color: #fff;
     width: 100%;
     height: auto;
     font-weight: 900;
@@ -293,7 +293,7 @@ header
 
   .navbarr a.active
   {
-    color: wheat;
+    color: white;
   }
 
   .navbarr.open
@@ -301,7 +301,7 @@ header
     right: 2%;
   }
 #navicon{
-  font-size: 30px;
+  font-size: 20px;
 }
   .logo img
   {
@@ -325,6 +325,9 @@ header
     transition: all .50s ease;
   }
 }
+
+
+
 
 
 
@@ -405,6 +408,7 @@ header
 .ListProduct .item img {
     width: 100%;
     /* filter: drop-shadow(0 50px 20px black); */
+   
 }
 
 .ListProduct {
@@ -414,7 +418,7 @@ header
 }
 
 .ListProduct .item {
-    background-color: rgba(64, 3, 247, 0.836);
+    background-color: #272753;
     padding: 10px;
     border-radius: 20px;
     color: white  ;
@@ -427,12 +431,12 @@ header
 }
 
 .ListProduct .item .price {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: small;
 }
 
 .ListProduct .item button {
-    background-color: rgb(99, 99, 250);
+    background-color: green;
     color: white;
     padding: 15px 10px;
     border: none;
@@ -501,6 +505,7 @@ body.showcart .container {
     gap: 10px;
     text-align: center;
     align-items: center;
+    
 }
 
 .listcart .quantity span {
@@ -580,24 +585,104 @@ body.showcart .container {
 @media only screen and (max-width: 1090px) {
 .star{
   justify-content: center;
+ 
 }
 }
 #medicon{
   font-size: 20px;
-  color: orange;
+  color: orange ;
+}
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-image: url('https://media.istockphoto.com/id/1208305480/photo/beautiful-abstract-wave-technology-digital-network-background-with-blue-light-digital-effect.jpg?s=612x612&w=0&k=20&c=z8pKywKLW6Tm0iXoT7zcWwBtUMh09S1vOvI2mt8lDdY='); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hea1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hea2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hea3{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        background-position: top;
+    }
+
+    .hea1 {
+        font-size: 2.5rem;
+    }
+
+    .hea2 {
+        font-size: 1.8rem;
+    }
+
+    .hea3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hea1 {
+        font-size: 2rem;
+    }
+
+    .hea2 {
+        font-size: 1.5rem;
+    }
+
+    .hea3 {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+.imaga{
+/* mix-blend-mode: multiply; */
+height: 150px;
+}
+
+.hhh{
+  font-size: 90px;
 }
     </style>
 </head>
 <body class="showcart">
   <header>
-    <a href="" class="logo"><img src="logo.png" alt=""> <span>IAN</span></a>
+    <a href="" class="logo"><img src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
 
     <ul class="navbarr">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="#pages">Pages</a></li>
-        <li><a href="#aboutt">About us</a></li>
+        <li><a href="blogss.html">Blogs</a></li>
+        <li><a href="contact.html">Contact us</a></li>
     </ul>
 
     <div class="mainn">
@@ -605,22 +690,28 @@ body.showcart .container {
       <div class="icon-cart">
         <i id="im" class='bx bx-cart'></i>
     <span class="cir">0</span>
-    </div>
+    </div> 
         <a href="C:\Users\ibirds\Desktop\ian\search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
-        
+       
       
       </a>
         
         
-        <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> sign in</a>
+        <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
        
         <i id="menu-icon" class='bx bxs-grid'></i>
     </div>
 </header>
+<div class="hero">
+  <div class="content">
+      <h1 class="hea1">Welcome to Our Shop</h1>
+      <!-- <h2 class="hea2">Your journey starts here</h2>
+      <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
+  </div>
+</div>
 
-<br><br><br> <br><br><br>
 
-<h1 class="heading">Welcome to Our Shop</h3>
+<!-- <h1 class="heading">Welcome to Our Shop</h3> -->
 
   <div class="carousel">
       <div class="group">
@@ -658,145 +749,193 @@ body.showcart .container {
 
 
 
-    <h1 class="i">Shop By Categories</h1>
+    <!-- <h1 class="i">Shop By Categories</h1>
     <br>
-    <h3 class="i">Antibiotics </h3>
+    <h3 class="i">Antibiotics </h3> -->
 <br>
-  <div class="container">
+<div class="container">
       
-      <div class="ListProduct">
-          <div class="item" data-id="1">
-              <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-              <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-              <div class="price">180</div><br>
-              <div class="star" style="display: flex;">
-                <i id="medicon" class='bx bxs-star'></i>
-                <i id="medicon" class='bx bxs-star'></i>
-                <i id="medicon" class='bx bxs-star'></i>
-                <i id="medicon" class='bx bxs-star-half' ></i>
-                <i id="medicon" class='bx bx-star'></i>
-              </div><br>
-               
-    
-                
-
-              <button class="addcart" data-product-id="1">Add to cart</button>
-          </div>
-
-
-          <div class="item" data-id="2">
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="2">Add to cart</button>
-          </div>
-
-
-          <div class="item" data-id="3">
-
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="3">Add to cart</button>
-          </div>
-
-
-          <div class="item" data-id="4">
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="4">Add to cart</button>
-          </div>
-
-
-          <div class="item" data-id="5">
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="5">Add to cart</button>
-          </div>
-          <div class="item" data-id="6">
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="6">Add to cart</button>
-          </div>
-          <div class="item" data-id="7">
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="7">Add to cart</button>
-          </div>
-          <div class="item" data-id="8">
-
-
-
-
-
-
-
+  <div class="ListProduct">
+      <div class="item" data-id="1">
+          <img  class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/61Q58yvCPuL._AC_UL320_.jpg" alt="">
+          <h2 class="hhh" style="font-size: 15px;">Pharma Science Ayurvedic Weight Gainer Supplement</h2><br>
+          <div class="price">880</div><br>
+          <div class="star" style="display: flex;">
+            <i id="medicon" class='bx bxs-star'></i>
+            <i id="medicon" class='bx bxs-star'></i>
+            <i id="medicon" class='bx bxs-star'></i>
+            <i id="medicon" class='bx bxs-star-half' ></i>
+            <i id="medicon" class='bx bx-star'></i>
+          </div><br>
+           
 
             
-            <img style="width: 90px;" src="https://m.media-amazon.com/images/I/41-t9z08s1L._AC_UL320_.jpg" alt="">
-            <h2>Himalaya Septilin Tablets - 60 Tablets</h2><br>
-            <div class="price">180</div><br>
-            <div class="star" style="display: flex;">
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star'></i>
-              <i id="medicon" class='bx bxs-star-half' ></i>
-              <i id="medicon" class='bx bx-star'></i>
-            </div><br>
-              <button class="addcart" data-product-id="8">Add to cart</button>
-          </div>
-          
+
+          <button class="addcart" data-product-id="1">Add to cart</button>
       </div>
-      
+
+
+      <div class="item" data-id="2">
+        <img  class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51Esx-dkEDL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Pure Nutrition Diabetic Care <br>Supplement - 120 Veg Capsules</h2><br>
+        <div class="price">480</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="2">Add to cart</button>
+      </div>
+
+
+      <div class="item" data-id="3">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31skJsSNRUL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Simply Herbal Ayurvedic <br>Digestive Elixir Syrup Tonic</h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="3">Add to cart</button>
+      </div>
+
+
+      <div class="item" data-id="4">
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/71aS6h6-YnL._AC_UL320_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Arth Perimenopause Multi-Symptom Support </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="4">Add to cart</button>
+      </div>
+
+
+      <div class="item" data-id="5">
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31IlE8lvPaL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Himalaya Shilajit | 100% Pure Himalayan Shilajit </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="5">Add to cart</button>
+      </div>
+      <div class="item" data-id="6">
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51zZQ89K4nL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">abur Tulsi Drops : 30ml (20ml + 10ml Free)</h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="6">Add to cart</button>
+      </div>
+      <div class="item" data-id="7">
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/41aKs4MY3GL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">The Old Natural Anti Stress Tablets </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="7">Add to cart</button>
+      </div>
+      <div class="item" data-id="8">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="8">Add to cart</button>
+      </div>
+      <!-- <div class="item" data-id="9">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/413BRSn4cSL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Zandu Ashwagandha Gold Plus | Made with Gold</h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="8">Add to cart</button>
+      </div>
+      <div class="item" data-id="10">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51MXt-DpDcL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">ENO Lemon Multipack Digestive Fruit Salt 30 gm</h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="8">Add to cart</button>
+      </div>
+      <div class="item" data-id="11">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="8">Add to cart</button>
+      </div>
+      <div class="item" data-id="12">
+
+        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
+        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
+        <div class="price">180</div><br>
+        <div class="star" style="display: flex;">
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star'></i>
+          <i id="medicon" class='bx bxs-star-half' ></i>
+          <i id="medicon" class='bx bx-star'></i>
+        </div><br>
+          <button class="addcart" data-product-id="8">Add to cart</button>
+      </div> -->
   </div>
+  
+</div>
+
 <br><br><br>
-  <h3 class="i">Antibiotics </h3>
+  <!-- <h3 class="i">Antibiotics </h3> -->
   <br>
   <br>
   
