@@ -31,7 +31,7 @@ body, html {
 body a
 {
   text-decoration: none;
-  color: #000;
+  
 }
 
 header
@@ -166,7 +166,7 @@ header
   .navbarr
   {
     position: absolute;
-    background: rgba(7, 2, 56, 0.5);
+    background: rgba(7, 2, 56, 0.8);
     top: 60%;
     right: 100%;
     color: #fff;
@@ -188,7 +188,7 @@ header
     display: block;
     margin: 12px 0;
     padding: 0 25px;
-    color: black;
+    color: #fff;
     transition: all .50 ease;
   }
 
@@ -582,9 +582,9 @@ h2 {
             background-color: #000080;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 20px;
             cursor: pointer;
-            border-radius: 50%;
+            border-radius: 100%;
             font-size: 18px;
             transition: background-color 0.3s;
         }
@@ -604,9 +604,7 @@ h2 {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, transform 0.3s;
-  
-}
-
+        }
 .view:hover {
     background-color:  #000080;
     transform: scale(1.05); /* Slightly enlarge the button */
@@ -769,6 +767,80 @@ a{
                 margin-top: 20px; /* Adds space above the image */
             }
         }
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-image: url('https://media.istockphoto.com/id/1125904763/photo/dna-helix-molecule-or-atom-abstract-structure-for-science.jpg?s=612x612&w=0&k=20&c=rLc_FqJc013VN8atfBOlwb5TB6UXmQrDieoAGfR0vI8='); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hea1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hea2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hea3{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        background-position: top;
+    }
+
+    .hea1 {
+        font-size: 2.5rem;
+    }
+
+    .hea2 {
+        font-size: 1.8rem;
+    }
+
+    .hea3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hea1 {
+        font-size: 2rem;
+    }
+
+    .hea2 {
+        font-size: 1.5rem;
+    }
+
+    .hea3 {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+
+        
     </style>
 </head>
 <body>
@@ -780,10 +852,10 @@ a{
 
         <ul class="navbarr">
             <li><a href="#home" class="active">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#blogs.html">Blog</a></li>
-            <li><a href="#contact.html">Contact us</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="C:\Users\ibirds\Desktop\ian\services.html">Services</a></li>
+            <li><a href="#blogs">Blog</a></li>
+            <li><a href="#contact us">Contact us</a></li>
         </ul>
 
         <div class="mainn">
@@ -798,15 +870,18 @@ a{
           </a>
             
             
-            <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
+            <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
            
             <i id="menu-icon" class='bx bxs-grid'></i>
         </div>
     </header>
-   <video class="background" src="https://videos.pexels.com/video-files/8375608/8375608-uhd_2732_1440_25fps.mp4" autoplay muted loop></video>
-    </iframe>
-    <!-- <img class="background" src="https://t4.ftcdn.net/jpg/03/20/48/11/360_F_320481159_jHPOQEiPU26ZkjHeKIxV1sQyWQWMirCH.jpg" alt=""> -->
-    
+    <div class="hero">
+      <div class="content">
+          <h1 class="hea1">Welcome to HealthSphere</h1>
+          <h2 class="hea2">Find The Solution For Your Health Here</h2>
+          <!-- <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
+      </div>
+  </div>
     <div class="container">
       <div class="box">
         <img src="threep.JPEG" alt="Common cold" class="responsive-image">
@@ -977,13 +1052,13 @@ a{
         </div>
     </div>
 </div>
-    <br>
+    <br>    <br><br>
 <div style="text-align: center;">
   <button class="view"><a href="services.html" style="color: #f0f0f0;"> View more doctors  </a> </button>
 </div>
     
     
-    <br>
+    <br><br>
 <h1 class="head" id="shop">Blogs</h1> 
 
 <div class="main-containerer">
