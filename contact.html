@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+	<link href="styless.css" rel="stylesheet">
+    <style>
+       
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-image: url('https://media.istockphoto.com/id/1550346339/photo/capsules-spilling-out-of-plastic-bottle.jpg?s=612x612&w=0&k=20&c=j7L0iHeYsPvWxX07j5NLCTJy92-jHRHl4DV2bQWEOTQ='); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: white;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hea1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hea2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hea3{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        background-position: top;
+    }
+
+    .hea1 {
+        font-size: 2.5rem;
+    }
+
+    .hea2 {
+        font-size: 1.8rem;
+    }
+
+    .hea3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hea1 {
+        font-size: 2rem;
+    }
+
+    .hea2 {
+        font-size: 1.5rem;
+    }
+
+    .hea3 {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .form-container, .contact-info {
+            flex: 1;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form-container {
+            margin-right: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .contact-info {
+            padding-left: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 20px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="subject"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="subject"]:focus,
+        textarea:focus {
+            border-color: #5cb85c;
+            box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color:#000080;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .form-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                border-right: none;
+            }
+
+            .contact-info {
+                padding-left: 0;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="logo"><img src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
+
+        <ul class="navbarr">
+            <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        </ul>
+
+        <div class="mainn">
+            
+          <!-- <div class="icon-cart">
+            <i id="im" class='bx bx-cart'></i>
+        <span class="cir">0</span>
+        </div> 
+            <a href="C:\Users\ibirds\Desktop\ian\search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
+            -->
+          
+          </a>
+            
+            
+            <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
+           
+            <i id="menu-icon" class='bx bxs-grid'></i>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="content">
+            <h1 class="hea1">Welcome to HealthSphere</h1>
+            <h2 class="hea2">Find The Solution For Your Health Here</h2>
+            <!-- <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+          
+            <p>We would love to hear from you! Please reach out with any questions or feedback.</p>
+            <h3>Contact Details:</h3>  <br>
+            <p><strong>Location:</strong> 123 Health St, Wellness City, HC 12345</p>  <br>
+            <p><strong>Phone:</strong> (123) 456-7890</p>  <br>
+            <p><strong>Email:</strong> contact@healthclinic.com</p>  <br>
+            <p><strong>Opening Hours:</strong> Mon-Fri, 9 AM - 5 PM</p>  <br>
+        </div>
+    </div>
+	<br><br><br>
+    <footer>
+    <div class="footer-container">
+        <p>&copy; 2024 All Rights Reserved by Sana and Imran</p>
+
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+        <div class="contact-info">
+            <p><i class="bx bx-phone"></i> +123 456 7890</p>
+            <p><i class="bx bx-envelope"></i> healthsphere@gmail.com</p>
+        </div>
+    </div>
+</footer>
+	 <script src="script.js"></script>
+</body>
+</html>
