@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link href="styless.css" rel="stylesheet">
+    <title>Medicine Store</title>
     <style>
         .carousel {
     /* ... */
@@ -14,7 +13,9 @@
       flex: 0 0 100%;
     }
   }
-
+a{
+  text-decoration: none;
+}
   /* Group the cards for better structure. */
   .group {
     display: flex;
@@ -196,10 +197,10 @@
 }
 
 .ListProduct .item {
-    background-color:  #000080;
+   background-color: #d5f0d7;
     padding: 10px;
     border-radius: 20px;
-    color: white  ;
+    color: black  ;
     
 }
 
@@ -374,7 +375,7 @@ body.showcart .container {
     position: relative;
     width: 100%;
     height: 100vh; /* Full screen height */
-    background-image: url('https://media.istockphoto.com/id/1208305480/photo/beautiful-abstract-wave-technology-digital-network-background-with-blue-light-digital-effect.jpg?s=612x612&w=0&k=20&c=z8pKywKLW6Tm0iXoT7zcWwBtUMh09S1vOvI2mt8lDdY='); /* Your background image */
+    background-image: url('shbg.png'); /* Your background image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -553,448 +554,642 @@ height: 150px;
 }
 
 
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+          background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow-y: auto;
+            color: black;
+           
+        }
+        .modal.active {
+            display: block;
+        }
+        .modal .close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quantity-controls button {
+            padding: 5px 10px;
+            cursor: pointer;
+            background: linear-gradient(45deg, #2ECC71, #A8E6CF);
+            color: black;
+            border-radius: 100px ;
+            border: none;
+        }
+        .total-price {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .checkout{
+          padding: 10px;
+          background-color: #000080;
+          color: white;
+          border: 2px solid #000080;
+          border-radius:20px ;
+        }
+        .checkout a{
+          color: white;
+        }
+
+        @media (max-width: 600px) {
+            .modal {
+                width: 95%;
+                padding: 15px;
+            }
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cart-item img {
+                width: 40px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .search-bar {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 500px;
+        }
+        .cart-icon {
+            cursor: pointer;
+            position: relative;
+            font-size: 20px;
+        }
+        .cir {
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            font-size: 12px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .modal.active {
+            display: block;
+        }
+        .close {
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-controls button {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .containerss {
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px 0;
+    transition: transform 0.5s;
+}
+
+.headss {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.icon-cartss {
+    position: relative;
+}
+
+.cirss {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    color: aliceblue;
+    top: 50%;
+    right: -20%;
+}
+
+#imss {
+    font-size: 35px;
+}
+
+.ListProduct .item img {
+    width: 100%;
+    /* filter: drop-shadow(0 50px 20px black); */
+   
+}
+
+.ListProductss {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.ListProductss .itemss {
+    background-color:  #000080;
+    padding: 10px;
+    border-radius: 20px;
+    color: white  ;
+    
+}
+
+.ListProductss .itemss h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.ListProductss .itemss .pricess {
+    letter-spacing: 2px;
+    font-size: small;
+}
+
+.ListProductss .itemss button {
+    background-color: green;
+    color: white;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 120px;
+}
+
+#categoryFilter{
+    padding: 10px;
+}
     </style>
 </head>
-<body class="showcart">
-  <header>
-    <a href="" class="logo"><img src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
-
-    <ul class="navbarr">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contact.html">Contact us</a></li>
-    </ul>
-
-    <div class="mainn">
-        
-      <div class="icon-cart">
-        <i id="im" class='bx bx-cart'></i>
-    <span class="cir">0</span>
-    </div> 
-<!--         <a href="C:\Users\ibirds\Desktop\ian\search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a> -->
-       
-      
-      </a>
-        
-        
-        <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
-       
-        <i id="menu-icon" class='bx bxs-grid'></i>
-    </div>
-</header>
-<div class="hero">
-  <div class="content">
-      <h1 class="hea1">Welcome to Our Shop</h1>
-      <!-- <h2 class="hea2">Your journey starts here</h2>
-      <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
-  </div>
-</div>
-
-
-<!-- <h1 class="heading">Welcome to Our Shop</h3> -->
-
-  <div class="carousel">
-      <div class="group">
-        <div class="card">
-          <img class="im"  src="mec6.jpeg" alt="">
-        </div>
-        <div class="card">
-
-          <img class="im"  src="mec5.jpeg" alt="">
-        </div>
-        <div class="card">
-          <img class="im"  src="mec4.jpeg" alt="">
-        </div>
-      </div>
-      <!-- Add `aria-hidden` to hide the duplicated cards from screen readers. -->
-      <div aria-hidden class="group">
-        <div class="card">
-          <img class="im"  src="mec1.jpeg" alt="">
-
-        </div>
-        <div class="card">
-          <img class="im"  src="mec2.jpeg" alt="">
-
-
-        </div>
-        <div class="card">
-          <img class="im"  src="mec3.jpeg" alt="">
-        </div>
-      </div>
-    </div>
-
-
-    <br><br>
-
-
-
-
-    <!-- <h1 class="i">Shop By Categories</h1>
-    <br>
-    <h3 class="i">Antibiotics </h3> -->
-<br>
-<div class="container">
-      
-  <div class="ListProduct">
-      <div class="item" data-id="1">
-          <img  class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/61Q58yvCPuL._AC_UL320_.jpg" alt="">
-          <h2 class="hhh" style="font-size: 15px;">Pharma Science Ayurvedic Weight Gainer Supplement</h2><br>
-          <div class="price">880</div><br>
-          <div class="star" style="display: flex;">
-            <i id="medicon" class='bx bxs-star'></i>
-            <i id="medicon" class='bx bxs-star'></i>
-            <i id="medicon" class='bx bxs-star'></i>
-            <i id="medicon" class='bx bxs-star-half' ></i>
-            <i id="medicon" class='bx bx-star'></i>
-          </div><br>
-           
-
+<body>
+    <header>
+        <a href="" class="logo"><img src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
+    
+        <ul class="navbarr">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    Sana@1345
+        <div class="mainn">
             
-
-          <button class="addcart" data-product-id="1">Add to cart</button>
-      </div>
-
-
-      <div class="item" data-id="2">
-        <img  class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51Esx-dkEDL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Pure Nutrition Diabetic Care <br>Supplement - 120 Veg Capsules</h2><br>
-        <div class="price">480</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="2">Add to cart</button>
-      </div>
-
-
-      <div class="item" data-id="3">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31skJsSNRUL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Simply Herbal Ayurvedic <br>Digestive Elixir Syrup Tonic</h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="3">Add to cart</button>
-      </div>
-
-
-      <div class="item" data-id="4">
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/71aS6h6-YnL._AC_UL320_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Arth Perimenopause Multi-Symptom Support </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="4">Add to cart</button>
-      </div>
-
-
-      <div class="item" data-id="5">
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31IlE8lvPaL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Himalaya Shilajit | 100% Pure Himalayan Shilajit </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="5">Add to cart</button>
-      </div>
-      <div class="item" data-id="6">
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51zZQ89K4nL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">abur Tulsi Drops : 30ml (20ml + 10ml Free)</h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="6">Add to cart</button>
-      </div>
-      <div class="item" data-id="7">
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/41aKs4MY3GL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">The Old Natural Anti Stress Tablets </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="7">Add to cart</button>
-      </div>
-      <div class="item" data-id="8">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="8">Add to cart</button>
-      </div>
-      <!-- <div class="item" data-id="9">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/413BRSn4cSL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Zandu Ashwagandha Gold Plus | Made with Gold</h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="8">Add to cart</button>
-      </div>
-      <div class="item" data-id="10">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51MXt-DpDcL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">ENO Lemon Multipack Digestive Fruit Salt 30 gm</h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="8">Add to cart</button>
-      </div>
-      <div class="item" data-id="11">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="8">Add to cart</button>
-      </div>
-      <div class="item" data-id="12">
-
-        <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
-        <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
-        <div class="price">180</div><br>
-        <div class="star" style="display: flex;">
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star'></i>
-          <i id="medicon" class='bx bxs-star-half' ></i>
-          <i id="medicon" class='bx bx-star'></i>
-        </div><br>
-          <button class="addcart" data-product-id="8">Add to cart</button>
-      </div> -->
-  </div>
-  
-</div>
-
-<br><br><br>
-  <!-- <h3 class="i">Antibiotics </h3> -->
-  <br>
-  <br>
-  
-
-  <div class="cartab">
-      <h1 >Shopping Cart</h1>
-      <div class="listcart">
+          <div class="icon-cart">
+            <i id="im" class='bx bx-cart'></i>
+        <span class="cir">0</span>
+        </div> 
+    <!--         <a href="C:\Users\ibirds\Desktop\ian\search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a> -->
+           
           
+          </a>
+            
+            
+            <a href="C:\Users\ibirds\Desktop\ian\login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
+           
+            <i id="menu-icon" class='bx bxs-grid'></i>
+        </div>
+    </header>
+    <div class="hero">
+      <div class="content">
+          <!-- <h1 class="hea1">Welcome to Our Shop</h1> -->
+          <!-- <h2 class="hea2">Your journey starts here</h2>
+          <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
       </div>
-      <div class="btn">
-          <button class="close">CLOSE</button>
+    </div>
+    <div class="container">
+        <h1>SEARCH MEDICINE</h1><br>
+        <input type="text" id="search" class="search-bar" placeholder="Search for medicines..."><br>
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="pain">Pain Relief</option>
+            <option value="cold">Cold & Flu</option>
+            <option value="digestive">Digestive Health</option>
+        </select>
+        <br> <br>
+        <!-- <div class="cart-icon">
+            🛒 Cart <span class="cir">0</span>
+        </div> -->
 
-          <button class="checkout">CHECKOUT</button>
-      </div>
-  </div>
-  <section class="testimonial-section">
-    <div class="testimonial-container">
-        <h2 class="section-title">What Our Patients Say</h2>
-        <div class="testimonials">
-            <div class="testimonial-card">
-                <img src="pep.jpeg" alt="Patient 1">
-                <p class="testimonial-text">"The care and attention I received was outstanding. I feel much better now!"</p>
-                <p class="testimonial-author">Saif Siddiqui</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="basit.jpeg" alt="Patient 2">
-                <p class="testimonial-text">"The staff were so welcoming, and the treatment was top-notch. Highly recommend!"</p>
-                <p class="testimonial-author">Basit Khan</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="anu.jpeg" alt="Patient 3">
-                <p class="testimonial-text">"A wonderful experience overall! The medical team was incredibly professional."</p>
-                <p class="testimonial-author">Anushka Gaur</p>
-            </div>
+        <div class="ListProduct">
+            <!-- Medicines loaded dynamically here -->
         </div>
     </div>
-</section>
-<footer>
-    <div class="footer-container">
-        <p>&copy; 2024 All Rights Reserved by Sana and Imran</p>
-
-        <div class="social-links">
-            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
-        </div>
-
-        <div class="contact-info">
-            <p><i class="bx bx-phone"></i> +123 456 7890</p>
-            <p><i class="bx bx-envelope"></i> healthsphere@gmail.com</p>
-        </div>
-    </div>
-</footer>
-<script>
-
-let iconCart = document.querySelector('.icon-cart'); 
-let body = document.querySelector('body');
-let closecart = document.querySelector('.close');
-let Listproducthtml = document.querySelector('.ListProduct');
-let carts = [];
-let listcartclass = document.querySelector('.listcart');
-let iconcartspan = document.querySelector('.cir');
-
-// Toggle cart visibility
-iconCart.addEventListener('click', () => {
-    body.classList.toggle('showcart');
-});
-
-closecart.addEventListener('click', () => {
-    body.classList.toggle('showcart');
-});
-
-// Extract products from HTML
-const listProducts = Array.from(Listproducthtml.children).map(item => ({
-    id: item.dataset.id,
-    image: item.querySelector('img').src,
-    name: item.querySelector('h2').textContent,
-    price: parseFloat(item.querySelector('.price').textContent)
-}));
-
-// Store products in local storage for checkout page
-localStorage.setItem('listProducts', JSON.stringify(listProducts));
-
-// Event delegation for adding products to the cart
-Listproducthtml.addEventListener('click', (event) => {
-    let positionClick = event.target;
-    if (positionClick.classList.contains('addcart')) {
-        let productId = positionClick.dataset.productId;
-        addToCart(productId, positionClick);
-    }
-});
-
-// Function to add items to the cart
-const addToCart = (productId, button) => {
-    let positionThisProduct = carts.findIndex(value => value.product_id === productId);
-
-    if (positionThisProduct < 0) {
-        carts.push({
-            product_id: productId,
-            quantity: 1
-        });
-        button.textContent = 'Added to cart';
-    } else {
-        carts[positionThisProduct].quantity += 1;
-        button.textContent = 'Added to cart';
-    }
-
-    addCartDataToHTML();
-
-    // Show alert that item has been added
-    alert(`Your item "${listProducts[positionThisProduct >= 0 ? positionThisProduct : carts.length - 1].name}" has been added to the cart!`);
-};
-
-// Function to render cart data in the HTML
-const addCartDataToHTML = () => {
-    listcartclass.innerHTML = '';
-    let totalQuantity = 0;
-
-    if (carts.length > 0) {
-        carts.forEach(cart => {
-            totalQuantity += cart.quantity;
-            let newCart = document.createElement('div');
-            newCart.classList.add('item');
-            let positionProduct = listProducts.findIndex(value => value.id == cart.product_id);
-            let info = listProducts[positionProduct];
-
-            if (info) {
-                newCart.innerHTML = `
-                    <div class="image">
-                        <img src="${info.image}" alt="">
-                    </div>
-                    <div class="name">${info.name}</div>
-                    <div class="totalprice">${(info.price * cart.quantity).toFixed(2)}</div>
-                    <div class="quantity">
-                        <span class="minus">-</span>
-                        <span>${cart.quantity}</span>
-                        <span class="plus">+</span>
-                    </div>
-                `;
-                listcartclass.appendChild(newCart);
-
-                // Event listeners for increment and decrement
-                newCart.querySelector('.plus').addEventListener('click', () => {
-                    cart.quantity++;
-                    addCartDataToHTML();
-                });
+        <!-- <div class="containerss">
+            <div class="ListProductss">
+                <div class="item" data-id="1" data-price="880">
+                    <img style="width: 90px;" src="https://m.media-amazon.com/images/I/61Q58yvCPuL._AC_UL320_.jpg" alt="">
+                    <h2 style="font-size: 15px;">Pharma Science Ayurvedic Weight Supplement</h2>
+                    <div class="pricess">880</div>
+                    <br>
+                    <div class="starss" style="display: flex;">
+                    <i id="mediconss" class='bx bxs-star'></i>
+                    <i id="mediconss" class='bx bxs-star'></i>
+                    <i id="mediconss" class='bx bxs-star'></i>
+                    <i id="mediconss" class='bx bxs-star-half' ></i>
+                    <i id="mediconss" class='bx bx-star'></i>
+                    </div><br>
+                    <button class="addcartss" data-product-id="1">Add to cart</button>
+                </div>
+        
+                <div class="item" data-id="2" data-price="480">
+                <img  class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51Esx-dkEDL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">Pure Nutrition Diabetic Care <br>Supplement - 120 Veg </h2><br>
+                <div class="price">480</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="2">Add to cart</button>
+                </div>
+        
+        
+                <div class="item" data-id="3" data-price="250">
+        
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31skJsSNRUL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">Simply Herbal Ayurvedic <br>Digestive Elixir Syrup Tonic</h2><br>
+                <div class="price">250</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="3">Add to cart</button>
+                </div>
+        
+        
+                <div class="item" data-id="4" data-price="980">
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/71aS6h6-YnL._AC_UL320_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">Arth Perimenopause Multi-Symptom Support </h2><br>
+                <div class="price">980</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="4">Add to cart</button>
+                </div>
+                <div class="item" data-id="5" data-price="130">
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/31IlE8lvPaL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">Himalaya Shilajit | 100% Pure Himalayan Shilajit </h2><br>
+                <div class="price">130</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="5">Add to cart</button>
+                </div>
+                <div class="item" data-id="6" data-price="545">
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/51zZQ89K4nL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">abur Tulsi Drops : 30ml (20ml + 10ml Free)</h2><br>
+                <div class="price">545</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="6">Add to cart</button>
+                </div>
+                <div class="item" data-id="7" data-price="700">
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/41aKs4MY3GL._SX300_SY300_QL70_FMwebp_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">The Old Natural Anti Stress Tablets </h2><br>
+                <div class="price">700</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="7">Add to cart</button>
+                </div>
+                <div class="item" data-id="8" data-price="340">
+        
+                <img class="imaga" style="width: 90px;" src="https://m.media-amazon.com/images/I/815ISK5MWBL._SX679_.jpg" alt="">
+                <h2 class="hhh" style="font-size: 15px;">Dabur Jamun Neem Karela Juice - 1L </h2><br>
+                <div class="price">340</div><br>
+                <div class="star" style="display: flex;">
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star'></i>
+                    <i id="medicon" class='bx bxs-star-half' ></i>
+                    <i id="medicon" class='bx bx-star'></i>
+                </div><br>
+                    <button class="addcart" data-product-id="8">Add to cart</button>
+                </div>
+        
                 
-                newCart.querySelector('.minus').addEventListener('click', () => {
-                    cart.quantity--;
-                    if (cart.quantity <= 0) {
-                        carts = carts.filter(c => c.product_id !== cart.product_id); // Remove product from cart
-                    }
-                    addCartDataToHTML();
-                });
-            }
-        });
-    }
-
-    iconcartspan.innerText = totalQuantity;
-};
-
-// Checkout button functionality
-document.querySelector('.checkout').addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default form submission
-    localStorage.setItem('carts', JSON.stringify(carts)); // Save cart to local storage
-    window.location.href = 'checkout.html'; // Redirect to checkout page
-});
-
-</script>
-<script src="script.js"></script>
-</body>
-
-
-
+            </div>
+        </div> -->
 
 
 
    
+
+    <!-- CART MODAL -->
+    <div class="modal" id="cartModal">
+        <span class="close">&times;</span>
+        <h2>Shopping Cart</h2>
+        <div class="listcart"></div>
+        <h3>Total: ₹<span id="totalAmount">0.00</span></h3>
+    </div>
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <img src="pep.jpeg" alt="Patient 1">
+                    <p class="testimonial-text">"The care and attention I received was outstanding. I feel much better now!"</p>
+                    <p class="testimonial-author">Saif Siddiqui</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="basit.jpeg" alt="Patient 2">
+                    <p class="testimonial-text">"The staff were so welcoming, and the treatment was top-notch. Highly recommend!"</p>
+                    <p class="testimonial-author">Basit Khan</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="anu.jpeg" alt="Patient 3">
+                    <p class="testimonial-text">"A wonderful experience overall! The medical team was incredibly professional."</p>
+                    <p class="testimonial-author">Anushka Gaur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 All Rights Reserved by Sana  Shaikh</p>
+    
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+            </div>
+    
+    
+    
+    
+    
+            
+            <div class="contact-info">
+                <p><i class="bx bx-phone"></i> +123 456 7890</p>
+                <p><i class="bx bx-envelope"></i> healthsphere@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let modal = document.getElementById("cartModal");
+        let closeModal = document.querySelector(".modal .close");
+        let listcartclass = document.querySelector(".listcart");
+        let totalAmount = document.getElementById("totalAmount");
+        let Listproducthtml = document.querySelector(".ListProduct");
+        let iconcartspan = document.querySelector('.cir');
+        let searchInput = document.getElementById("search");
+        let categoryFilter = document.getElementById("categoryFilter");
+
+        let carts = JSON.parse(localStorage.getItem('cart')) || [];
+        let products = JSON.parse(localStorage.getItem("products")) || [];
+
+        // Update cart badge
+        function updateCartBadge() {
+            iconcartspan.textContent = carts.length;
+        }
+
+        // Load Products
+        function displayProducts() {
+            Listproducthtml.innerHTML = "";
+            let searchQuery = searchInput.value.toLowerCase();
+            let selectedCategory = categoryFilter.value;
+
+            products.forEach((product, index) => {
+                if ((selectedCategory === "all" || product.category === selectedCategory) &&
+                    (product.name.toLowerCase().includes(searchQuery))) {
+                    
+                    let productHTML = `
+                        <div class="item" data-id="${index}" data-price="${product.price}">
+                            <img style="width: 90px;" src="${product.image}" alt="${product.name}">
+                            <h2 style="font-size: 15px;">${product.name}</h2>
+                            <div class="price">₹${product.price}</div>
+                            <br>
+                            <div class="star" style="display: flex;">
+                                ${generateStars(product.rating)}
+                            </div>
+                            <br>
+                            <input type="number" value="1" min="1" class="quantity" data-id="${index}" style="width: 50px;">
+                            <button class="addcart" data-product-id="${index}">Add to cart</button>
+                        </div>
+                    `;
+                    Listproducthtml.innerHTML += productHTML;
+                }
+            });
+
+            document.querySelectorAll(".addcart").forEach(button => {
+                button.addEventListener("click", addToCart);
+            });
+        }
+
+        // Add to Cart
+        function addToCart(event) {
+            let productId = event.target.dataset.productId;
+            let productElement = event.target.closest('.item');
+            let productName = productElement.querySelector('h2').textContent;
+            let productPrice = parseFloat(productElement.dataset.price);
+            let productImage = productElement.querySelector('img').src;
+            let quantity = parseInt(productElement.querySelector(".quantity").value);
+
+            let positionThisProduct = carts.findIndex(value => value.product_id === productId);
+            
+            if (positionThisProduct < 0) {
+                carts.push({ product_id: productId, name: productName, price: productPrice, image: productImage, quantity: quantity });
+            } else {
+                carts[positionThisProduct].quantity += quantity;
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(carts));
+            updateCartBadge();
+            addCartDataToHTML();
+            modal.classList.add("active");
+        }
+
+        // Generate Stars
+        function generateStars(rating) {
+            let stars = "";
+            for (let i = 1; i <= 5; i++) {
+                stars += (i <= rating) ? "⭐" : "☆";
+            }
+            return stars;
+        }
+
+        // Add Cart Data to HTML
+        function addCartDataToHTML() {
+            listcartclass.innerHTML = '';
+            let total = 0;
+
+            carts.forEach(cart => {
+                let newCart = document.createElement('div');
+                newCart.classList.add('cart-item');
+                newCart.innerHTML = `
+                    <img src="${cart.image}" alt="" style="width: 50px;">
+                    <div>${cart.name}</div>
+                    <div>₹${cart.price}</div>
+                    <div class="quantity-controls">
+                        <button class="minus" data-id="${cart.product_id}">-</button>
+                        <span>${cart.quantity}</span><br>
+                        <button class="plus" data-id="${cart.product_id}">+</button>
+                    </div>
+                    <div>₹${(cart.price * cart.quantity).toFixed(2)}</div>
+                `;
+                listcartclass.appendChild(newCart);
+                total += cart.price * cart.quantity;
+            });
+
+            totalAmount.innerText = total.toFixed(2);
+
+            document.querySelectorAll(".plus").forEach(button => {
+                button.addEventListener("click", (event) => {
+                    let productId = event.target.dataset.id;
+                    let cartItem = carts.find(item => item.product_id === productId);
+                    if (cartItem) {
+                        cartItem.quantity += 1;
+                        addCartDataToHTML();
+                        localStorage.setItem('cart', JSON.stringify(carts));
+                    }
+                });
+            });
+
+            document.querySelectorAll(".minus").forEach(button => {
+                button.addEventListener("click", (event) => {
+                    let productId = event.target.dataset.id;
+                    let cartItem = carts.find(item => item.product_id === productId);
+                    if (cartItem.quantity > 1) {
+                        cartItem.quantity -= 1;
+                    } else {
+                        carts = carts.filter(item => item.product_id !== productId);
+                    }
+                    addCartDataToHTML();
+                    localStorage.setItem('cart', JSON.stringify(carts));
+                    updateCartBadge();
+                });
+            });
+        }
+
+        closeModal.addEventListener('click', () => modal.classList.remove("active"));
+
+        searchInput.addEventListener("input", displayProducts);
+        categoryFilter.addEventListener("change", displayProducts);
+
+        displayProducts();
+        addCartDataToHTML();
+        updateCartBadge();
+        
+        
+    </script>
+
+</body>
 </html>
