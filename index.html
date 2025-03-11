@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	<link href="styless.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
        
 
@@ -376,18 +377,22 @@ h2 {
         .view {
           
     padding: 10px 20px;
-    background-color: #000080;
-    color: white;
+    background-color: #2ECC71;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s, transform 0.3s;
         }
+        .view a{
+            color: black;
+        }
 .view:hover {
-    background-color:  #000080;
+    background: linear-gradient(45deg, #2ECC71, #A8E6CF);
     transform: scale(1.05); /* Slightly enlarge the button */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    color: black;
 }
 
 .view:focus {
@@ -526,7 +531,7 @@ a{
         }
 
         .vitar {
-            background-color: #000080;
+            background-color: #2ECC71;
             padding: 10px;
             border-radius: 50px;
             color: white;
@@ -550,7 +555,7 @@ a{
     position: relative;
     width: 100%;
     height: 100vh; /* Full screen height */
-    background-image: url("i.jpg");
+    background-image: url("dc2.png"); /* Your background image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -567,23 +572,29 @@ a{
 }
 
 .hea1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 15px;
-	text-shadow: 1px 2px black;
+	text-shadow: 7px 2px 8px black;
+   font-weight: 900;
+
 }
 
 .hea2 {
-    font-size: 2rem;
-    margin-bottom: 10px
-	text-shadow: 1px 2px black;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+	text-shadow: 7px 2px 8px black;
 }
 
 .hea3{
     font-size: 1.2rem;
     line-height: 1.5;
-	text-shadow: 1px 2px black;
+	text-shadow: 1px 8px black;
 }
-
+.hea1 span{
+color: #5dd9ae;
+font-size: 3rem;
+letter-spacing: 3px;
+}
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
     .hero {
@@ -620,7 +631,9 @@ a{
         padding: 10px;
     }
 }
-
+.white{
+    color: white;
+}
 /* Footer styling */
 
         
@@ -631,20 +644,20 @@ a{
   
 
     <header id="home">
-        <a href="" class="logo"><img src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
+        <a href="" class="logo"><img class="imglog" src="log.png" alt=""> <span style="   font-family: Garamond, serif;">HealthSphere</span></a>
 
         <ul class="navbarr">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blogs">Blog</a></li>
-            <li><a href="contact.html">About us</a></li>
+            <li><a href="#home" class="active"><i class='bx bx-home'></i> Home</a></li>
+            <li><a href="#shop"><i class='bx bx-store'></i> Shop</a></li>
+            <li><a href="#services"><i class='bx bx-plus-medical'></i> Services</a></li>
+            <li><a href="#blogs">  <i class='bx bxs-pen' ></i> Blog</a></li>
+            <li><a href="contact.html"><i class='bx bxs-contact' ></i> About us</a></li>
         </ul>
 
         <div class="mainn">
-            
+          
           <!-- <div class="icon-cart">
-            <i id="im" class='bx bx-cart'></i>
+            <i id="im" class='bx bx-cart'></i> 
         <span class="cir">0</span>
         </div> 
             <a href="C:\Users\ibirds\Desktop\ian\search.html" class="linkedin"><i id="navicon" class='bx bx-search'></i></a>
@@ -653,20 +666,20 @@ a{
           </a>
             
             
-            <a href="login.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
+            <a href="signinop.html" class="behance" id="navicon" style="font-size: 20px;"> Sign in</a>
            
             <i id="menu-icon" class='bx bxs-grid'></i>
         </div>
     </header>
     <div class="hero">
       <div class="content">
-          <h1 class="hea1">Welcome to HealthSphere</h1>
-          <h2 class="hea2">Find The Solution For Your Health Here</h2>
+          <h1 class="hea1">Welcome to <span > HealthSphere</span></h1>
+          <h2 class="hea2">"Medicines cure diseases ,but only doctors can cure patients"</h2>
           <!-- <p class="hea3"> Explore the possibilities with us and discover new horizons in the digital world.</p> -->
       </div>
   </div>
     <div class="container">
-      <div class="box">
+      <div  class="box">
         <img src="threep.JPEG" alt="Common cold" class="responsive-image">
         <div class="overlay">
             <!-- <i id="icon1" class='bx bx-capsule'></i> -->
@@ -769,7 +782,7 @@ a{
     </div>
 </div>
 <div style="text-align: center;">
-    <button class="view"><a href="shop.html" style="color: #f0f0f0;"> View more </a> </button>
+    <button class="view"><a href="check.html" style="color: black;"> View more </a> </button>
 </div>
 
 
@@ -837,7 +850,7 @@ a{
 </div>
     <br>    <br><br>
 <div style="text-align: center;">
-  <button class="view"><a href="services.html" style="color: #f0f0f0;"> View more doctors  </a> </button>
+  <button class="view"><a href="services.html" style="color: black;"> View more doctors  </a> </button>
 </div>
     
     
@@ -846,7 +859,7 @@ a{
 
 <div class="main-containerer">
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#health"> Health</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#health" class="white"> Health</a></h4><br>
       <h4>Keep Your Health By Wearing a Mask & Bringing Sanitizer</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -855,7 +868,7 @@ a{
   </div>
 
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#pharmacy">Pharmacy</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#pharmacy" class="white">Pharmacy</a></h4><br>
       <h4>Farmacy Brings Hundreds Of Off-Site Vaccination Clinics</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -866,7 +879,7 @@ a{
 
 <div class="main-containerer">
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#vitamin">Vitamin</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#vitamin" class="white">Vitamin</a></h4><br>
       <h4>Vitamins That Are Suitable For Maintaining Body Fitness</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -875,7 +888,7 @@ a{
   </div>
 
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#protection">Protection</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#protection" class="white">Protection</a></h4><br>
       <h4>Keep Using Masks In The Era Of The Pandemic</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -885,7 +898,7 @@ a{
 </div>
 <div class="main-containerer">
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#medicine">Medcine</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#medicine" class="white">Medcine</a></h4><br>
       <h4>Tips & Tricks To Store Medicine So That It Can Still Be Used</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -894,7 +907,7 @@ a{
   </div>
 
   <div class="text-containerer">
-      <h4 class="vitar"><a href="blogs.html#tablet">Tablet</a></h4><br>
+      <h4 class="vitar"><a href="blogs.html#tablet" class="white">Tablet</a></h4><br>
       <h4>Tips Solving Today’s Prenatal Vitamin Problem</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
   </div>
@@ -904,12 +917,12 @@ a{
 </div>
     
 <div style="text-align: center;">
-  <button class="view"><a href="blogss.html" style="color: #f0f0f0;"> View more Blogs  </a> </button>
+  <button class="view"><a href="blogss.html" style="color: black;"> View more Blogs  </a> </button>
 </div>
 <br><br>
 <footer>
     <div class="footer-container">
-        <p>&copy; 2024 All Rights Reserved by Sana and Imran</p>
+        <p>&copy; 2024 All Rights Reserved by Sana Shaikh</p>
 
         <div class="social-links">
             <a href="https://facebook.com" target="_blank" class="social-icon"><i class="bx bxl-facebook"></i></a>
@@ -954,5 +967,9 @@ let currentIndex = 0;
 	
     </script>
 	<script src="script.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
